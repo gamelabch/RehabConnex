@@ -1,0 +1,5 @@
+/Users/t00cg/Dropbox/RehabConnex/3_RehabConnexServer/source/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/t00cg/Dropbox/RehabConnex/3_RehabConnexServer/source/bin/Debug/RehabConnex.exe.mdb
+/Users/t00cg/Dropbox/RehabConnex/3_RehabConnexServer/source/bin/Debug/RehabConnex.exe
+/Users/t00cg/Dropbox/RehabConnex/3_RehabConnexServer/source/obj/x86/Debug/RehabConnex.exe
+/Users/t00cg/Dropbox/RehabConnex/3_RehabConnexServer/source/obj/x86/Debug/RehabConnex.exe.mdb

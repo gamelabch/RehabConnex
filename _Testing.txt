@@ -1,0 +1,52 @@
+﻿### testing ####
+nc 127.0.0.1 42000
+
+set.name jx this testdrive
+
+insertdeviceoutputslot jx output
+insertdeviceinputslot jx input
+insertdevicepushpullslot jx pushpull
+
+get.name jx root.server.clients.testdrive.devices.input.slotsets.slotset.slots.slot
+
+# direct sets (for configs)
+set.name jx this abc
+insertdeviceinputslot jx abc
+set jx root.server.clients.abc.devices.abc.slotsets.slotset.slots.slot 4
+get jx root.server.clients.abc.devices.abc.slotsets.slotset.slots.slot
+// set input > insert it also in the input for config
+
+# client B
+set jx1 root.server.clients.Gabarello.devices.GabarelloGame.slotsets.normalized.slots.gameState 3
+
+# PATCHES
+# test patch: set input > output
+set jx this.devices.output.slotsets.slotset.slots.slot 333
+patch jx root.server.clients.testdrive.devices.output.slotsets.slotset.slots.slot root.server.clients.testdrive.devices.input.slotsets.slotset.slots.slot
+
+set jx this.devices.output.slotsets.slotset.slots.slot 111
+
+# test patch pushpull from output
+patch jx root.server.clients.testdrive.devices.output.slotsets.slotset.slots.slot root.server.clients.testdrive.devices.pushpull.slotsets.slotset.slots.slot
+set jx this.devices.input.slotsets.slotset.slots.slot 222
+
+# test patch pushpull from input
+patch jx root.server.clients.testdrive.devices.input.slotsets.slotset.slots.slot root.server.clients.testdrive.devices.pushpull.slotsets.slotset.slots.slot
+set jx this.devices.input.slotsets.slotset.slots.slot 333
+
+# SERVICES
+# if services log/storage is loaded
+# testing log
+patch jx root.server.clients.testdrive.devices.input.slotsets.slotset.slots.slot root.server.clients.services.devices.services.slotsets.normalized.slots.log
+
+# testing storage
+patch jx root.server.clients.testdrive.devices.input.slotsets.slotset.slots.slot root.server.clients.services.devices.services.slotsets.normalized.slots.storage
+push jx root.server.clients.services.devices.services.slotsets.normalized.slots.storage a#4
+
+# testing autopatching
+patch.auto jx root.server.clients.testdrive.devices.autooutput.slotsets.slotset.slots.slot root.server.clients.testdrive.devices.autoinput.slotsets.slotset.slots.slot
+insertdeviceoutputslot jx autooutput
+insertdeviceinputslot jx autoinput
+insertdevicepushpullslot jx autopushpull
+set jx root.server.clients.testdrive.devices.autooutput.slotsets.slotset.slots.slot 80
+
