@@ -1,7 +1,7 @@
 # rehabconnex server 
 # config
 name RehabConnex+Room
-# input
+# input 
 port 42000
 
 # add job
