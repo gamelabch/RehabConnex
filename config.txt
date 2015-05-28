@@ -1,6 +1,0 @@
-# rehabconnex server config
-name RehabConnex+Room+A
-# debug
-debugstructure true
-# input
-port 42000
