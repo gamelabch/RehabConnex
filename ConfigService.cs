@@ -37,7 +37,7 @@ namespace RehabConnex {
 	public class ConfigService {
 
 		bool debugClass = false; //!< enables debug output
-		float version = 0.82f; //!< version of the rehabconnex server
+		float version = 0.87f; //!< version of the rehabconnex server
 		public int port = 42000; //!< default server port, if no port is set in the config file
 
 		// Structure
@@ -56,7 +56,7 @@ namespace RehabConnex {
 
 		// url
 		string rehabconnexClaim="Combine any reha- or game software and any interfaces. You decide!";
-		string rehabconnexProjectURL="http://www.rehabconnex.uzh.ch";
+		string rehabconnexProjectURL="http://rehabconnex.zhdk.ch";
 
 		// receipt * say ok etc ...
 		// in stream no quittierung
